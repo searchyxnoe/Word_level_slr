@@ -1,0 +1,76 @@
+How data should look after augmentation thanks to data_augmentation.py
+48 videos per class for training folder
+8 videos per class for validation folder
+/home/unknown_device/Musique/Hackathon/
+├── validation/
+│   ├── alert/
+│   ├── careful/
+│   ├── cheap/
+│   ├── crazy/
+│   ├── dangerous/
+│   ├── decent/
+│   ├── dumb/
+│   ├── excited/
+│   ├── extreme/
+│   ├── fantastic/
+│   ├── far/
+│   ├── fearful/
+│   ├── foreign/
+│   ├── funny/
+│   ├── good/
+│   ├── healthy/
+│   ├── heavy/
+│   ├── important/
+│   ├── intelligent/
+│   ├── interesting/
+│   ├── late/
+│   ├── less/
+│   ├── new/
+│   ├── no/
+│   ├── noisy/
+│   ├── peaceful/
+│   ├── quick/
+│   ├── ready/
+│   ├── secure/
+│   ├── smart/
+│   └── yes/
+│       ├── 1.mp4
+│       ├── 2.mp4
+│       ├── ...
+│       └── 8.mp4
+└── training/
+    ├── alert/
+    ├── careful/
+    ├── cheap/
+    ├── crazy/
+    ├── dangerous/
+    ├── decent/
+    ├── dumb/
+    ├── excited/
+    ├── extreme/
+    ├── fantastic/
+    ├── far/
+    ├── fearful/
+    ├── foreign/
+    ├── funny/
+    ├── good/
+    ├── healthy/
+    ├── heavy/
+    ├── important/
+    ├── intelligent/
+    ├── interesting/
+    ├── late/
+    ├── less/
+    ├── new/
+    ├── no/
+    ├── noisy/
+    ├── peaceful/
+    ├── quick/
+    ├── ready/
+    ├── secure/
+    ├── smart/
+    └── yes/
+        ├── 1.mp4
+        ├── 2.mp4
+        ├── ...
+        └── 48.mp4
