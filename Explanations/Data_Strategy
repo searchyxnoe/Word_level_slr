@@ -1,14 +1,14 @@
 NB : i mean an indice
 
 Extract 15 equidistant frames
-Apply FastMobileEnhancer (CLAHE) to those frames : code link : 
+Apply FastMobileEnhancer (CLAHE) to those frames : code link : https://github.com/searchyxnoe/Word_level_slr/blob/main/Code/FastMobileEnhancer.py
 
 If frame i (0–14) lacks hand detection, linear interpolate using nearest valid frames within ±3 indices (max(0, i-3) to min(14, i+3)). No distant smoothing across sign boundaries—preserves trajectories. Long gaps (>6 frames) → zero pad + mask=0.
 
 Tensor format for storing the data [15,134]
 [(left/right_hand_bone_vectors from 3d hand model), (shoulder-midpoint_to_left/right_pose_wrist from pose models),
 (left/right_wrist_velocity_pose_model),(left_hand_present, right_hand_present are masks for 3d hand model)] 
----> more info by checking code, sorry : code link : 
+---> more info by checking code, sorry : code link : https://github.com/searchyxnoe/Word_level_slr/blob/main/Code/Data_Extraction.py
 
 {
 Bone vectors :
