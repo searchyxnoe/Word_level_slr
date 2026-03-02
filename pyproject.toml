@@ -1,0 +1,21 @@
+[project]
+name = "hackathon"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastdtw>=0.3.4",
+    "matplotlib>=3.10.8",
+    "mediapipe<=0.10.29",
+    "opencv-python>=4.13.0.92",
+    "optuna>=4.7.0",
+    "scikit-learn>=1.8.0",
+    "scipy>=1.17.1",
+    "streamlit>=1.54.0",
+    "streamlit-webrtc>=0.64.5",
+    "torch>=2.10.0",
+    "torchaudio>=2.10.0",
+    "torchvision>=0.25.0",
+    "tqdm>=4.67.3",
+]
