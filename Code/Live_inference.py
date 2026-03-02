@@ -1,4 +1,8 @@
-#Writed by Mistral
+#Written by Devstral-2512
+
+#Allow to test the model using camera, please make your upper body and hands be in the window of opencv for high results,
+#a threshold of 70% was set to limit wrong predictions
+
 import cv2
 import numpy as np
 import torch
