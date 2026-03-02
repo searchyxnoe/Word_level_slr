@@ -2,6 +2,10 @@
 Mistral AI Hackathon project (online track) : 
 Building a deep learning model which learn spatio temporal features, of sign gestures, through mediapipe keypoints/landmarks, in order to translate signed gestures (static/dynamic) to text, so that developpers/ong can work upon, to allow the deaf community to interact with the society and receive appropriate service.
 
+# Prototype 
+Link YTB : https://www.youtube.com/watch?v=-8j1cZY1qAs
+
+# Contact
 If you want to contact me to help me (non profit project) : 
 discord : alphanord 
 email : xavier-shiller@proton.me 
@@ -58,5 +62,5 @@ To make testing easier I'm zipping the folder I used in my pc, for this Hackatho
 2. 02/03/2026 - 00:54 : Updating github repo to make the research accessible, archive folder is considered useless for me but I prefer to let you see
                         I am almost pleased with new data extraction strategy, but the fact that we are using less data from pose model may be a cue
                         for the performance ceiling (val f1 = 90%)
-3.
+3. 02/03/2026 - 03:58 : Start submitting the work in Hackiterate video link : https://www.youtube.com/watch?v=-8j1cZY1qAs
 
