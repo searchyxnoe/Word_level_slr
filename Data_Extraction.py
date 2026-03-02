@@ -1,3 +1,8 @@
+# Writed by one of two or both Gemini 3.1 Pro / Devstral-2512
+
+# optimized for cpu only because I don't have dedicated hardware,
+# I use Fedora linux so there may be some special functions there for the parallel processing
+
 import os
 import cv2
 import gc
