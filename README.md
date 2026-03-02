@@ -6,7 +6,7 @@ If you want to contact me to help me (non profit project) :
 discord : alphanord 
 email : xavier-shiller@proton.me 
 
-# Overall architecture / Plan
+# Overall architecture / Plan (We do not recognize gestures using raw videos, thus training is not on videos but on extracted fingers and some relevant data)
 1. Find a dataset of RGB videos : https://www.kaggle.com/datasets/jahanzebnaeem/wlpsl Licensed under the Computational Use of Data Agreement (C-UDA) 
 2. Improve frame quality using CLAHE on extracted frames only so that mediapipe recognition model is improved
 3. Apply data augmentation to make dataset bigger
@@ -18,6 +18,7 @@ email : xavier-shiller@proton.me
    Spoiler : I'm happy I advanced and learned so much due to restrained time, choice of dataset and poor data augmentation did not allow
    to achieve the ambition of val f1 > 95%, but I believe feasability of a true real time slr system using TCN for multi class classification
    or retrieval due to prior experiences with it. 
+9. Deploy it for cross platform (actually only ui mockup made by Qwen 3.5 Plus, it generated some html files then Gemini 3.1 Pro refined)
 
 # Detailed Architecture implemented 
 Input: (B, 15, 134)
