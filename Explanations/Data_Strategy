@@ -1,32 +1,44 @@
 NB : i mean an indice
+
 Extract 15 equidistant frames
-Apply FastMobileEnhancer (CLAHE) to those frames
+Apply FastMobileEnhancer (CLAHE) to those frames : code link : 
 
 If frame i (0–14) lacks hand detection, linear interpolate using nearest valid frames within ±3 indices (max(0, i-3) to min(14, i+3)). No distant smoothing across sign boundaries—preserves trajectories. Long gaps (>6 frames) → zero pad + mask=0.
 
-Data format [15,134]
+Tensor format for storing the data [15,134]
 [(left/right_hand_bone_vectors from 3d hand model), (shoulder-midpoint_to_left/right_pose_wrist from pose models),
 (left/right_wrist_velocity_pose_model),(left_hand_present, right_hand_present are masks for 3d hand model)] 
+---> more info by checking code, sorry : code link : 
 
+{
 Bone vectors :
 Left hand processing → use LEFT wrist/scale exclusively
 Right hand processing → use RIGHT wrist/scale exclusively
 Wrist‑centric translation
 Scale normalization (wrist to middle fingertip)
 Build 20 bone vectors (Use MediaPipe's fixed hand skeleton graph (parent→child connections))
+}
 
+{
 Vectors coming from midpoint-shoulder :
+
 Compute raw vectors
 Normalize by shoulder width
+}
 
+{
 left/right_wrist_velocity_pose_model :
 
 Since your position vectors (shoulder_mid → wrist) 
 are already torso‑scale normalized (/ shoulder_width), 
 Compute Δ on torso‑normalized positions (norm_pos[t] - norm_pos[t-1]). Frame 0 = zeros. Frame‑rate + signer‑speed invariant. Interpolate wrist positions first if missing.
+}
 
+{
 Hand presence masks (hands only):
 [left_present, right_present] = 1.0 if multi_hand_world_landmarks detected, else 0.0 (even post‑interp).
+}
+
 
 ---
 
