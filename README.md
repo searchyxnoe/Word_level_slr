@@ -2,6 +2,9 @@
 Mistral AI Hackathon project (online track) : 
 Building a deep learning model which learn spatio temporal features, of sign gestures, through mediapipe keypoints/landmarks, in order to translate signed gestures (static/dynamic) to text, so that developpers/ong can work upon, to allow the deaf community to interact with the society and receive appropriate service.
 
+If you want to contact me : discord : alphanord 
+                            email : xavier-shiller@proton.me 
+
 # Overall architecture / Plan
 1. Find a dataset of RGB videos : https://www.kaggle.com/datasets/jahanzebnaeem/wlpsl Licensed under the Computational Use of Data Agreement (C-UDA) 
 2. Improve frame quality using CLAHE on extracted frames only so that mediapipe recognition model is improved
