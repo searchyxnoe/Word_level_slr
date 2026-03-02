@@ -43,7 +43,7 @@ For libraries versions look at https://github.com/searchyxnoe/Word_level_slr/blo
 
 Or 
 
-To make testing easier I'm zipping the folder I used in my pc, for this Hackathon so people can test the program locally, easily, just adapt the path folder for Live_Inference.py and have a camera and enjoy
+To make testing easier I'm zipping the folder I used in my pc, for this Hackathon so people can test the program locally, easily, just adapt the path folder for Live_Inference.py and have a camera and enjoy, download here : https://kdrive.infomaniak.com/app/share/269184/a29c9ccc-5059-48fc-b514-b40369729577  (kdrive is a swiss alternative to gmail btw)
 
 # Constraints
 1. Training locally in a laptop : 16 GB Ram, AMD 4600 H, no dedicated GPU => cpu-only training => explore light architectures
