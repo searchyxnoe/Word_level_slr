@@ -9,7 +9,36 @@ Building a deep learning model which learn spatio temporal features, of sign ges
 4. Extract hands landmarks and pose landmarks through mediapipe to obtain 3d world coordinate so that we can differentiate complex gestures
 5. Fix missing value & apply normalization => store data in a [15,138] tensor
 6. Train a ML or DL model for Validation_F1 >=90%
-7. Check performance and iterate until i am pleased with the results (unfortunately I didnt organize myself well, neither reflected enough well)
+7. Implement an NPL model for sentence printing from recognized words using a small Mistral model (unfortunately time is running)
+8. Check performance and iterate until i am pleased with the results (unfortunately I didnt organize myself well, neither reflected enough well)
+   Spoiler : I'm happy I advanced and learned so much due to restrained time, choice of dataset and poor data augmentation did not allow
+   to achieve the ambition of val f1 > 95%, but I believe feasability of a true real time slr system using TCN for multi class classification
+   or retrieval due to prior experiences with it. 
+
+# Detailed Architecture implemented 
+Input: (B, 15, 134)
+  ↓ transpose → (B, 134, 15)
+  ↓ Conv1D(134→64, k=1)  # Projection
+  ↓ TCNBlock(ch=64, d=1)
+  ↓ TCNBlock(ch=64, d=2)
+  ↓ TCNBlock(ch=64, d=4)
+  ↓ TCNBlock(ch=64, d=8)
+  ↓ TCNBlock(ch=64, d=16)
+  ↓ TCNBlock(ch=64, d=32)  # Receptive field = 127
+  ↓ AdaptiveAvgPool1D(1) → (B, 64)
+  ↓ Linear(64→32) → BN → GELU → Drop(0.3)
+  ↓ Linear(32→31 classes)
+
+Each TCNBlock = 2x Dilated Conv + Residual (repeat 6x with growing dilation)
+
+# Requirements 
+
+Python 3.11 , Pytorch, UV (I use  for managing python versions and libraries)
+For libraries versions look at https://github.com/searchyxnoe/Word_level_slr/blob/main/pyproject.toml 
+
+Or 
+
+To make testing easier I'm zipping the folder I used in my pc, for this Hackathon so people can test the program locally, easily, just adapt the path folder for Live_Inference.py and have a camera and enjoy
 
 # Constraints
 1. Training locally in a laptop : 16 GB Ram, AMD 4600 H, no dedicated GPU => cpu-only training => explore light architectures
