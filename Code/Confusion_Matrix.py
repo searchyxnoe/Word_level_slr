@@ -1,3 +1,6 @@
+# Writed by Devstral-2512 for printing per class accuracies check line 118 to change average = 'with one you want' 
+# like 'micro', 'macro', 'weighted' , exemple average = 'macro' 
+
 import os
 import numpy as np
 import torch
